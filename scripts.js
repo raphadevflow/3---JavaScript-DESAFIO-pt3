@@ -10,6 +10,7 @@ function convertValues(){
     const convertedValue = inputCurrencyValue / dolarToday
 
     currencyValueToConvert.innerHTML = inputCurrencyValue 
+    currencyValueConverted.innerHTML = convertedValue
 
     console.log(convertedValue)
 }
