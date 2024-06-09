@@ -41,7 +41,19 @@ function convertValues() {
 
 
 function changeCurrency() {
-    console.log("moeda trocada")
+    const currencyName = document.getElementById ("currency-name")
+    const currencyImage = document.querySelector(".currency-img")
+
+    if(currencySelect.value == "dolar"){
+        currencyName.innerHTML = "Dólar americano"
+        currencyImage.src = "./assets/USD.jpg"
+    }
+    
+    if(currencySelect.value == "euro"){
+        currencyName.innerHTML = "Euro"
+        currencyImage.src = "./assets/Euro.jpg"
+    }
+    
 
 }
 
