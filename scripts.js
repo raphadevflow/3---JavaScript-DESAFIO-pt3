@@ -1,5 +1,8 @@
-const convertButton = document.querySelector(".convert-button")
-const currencySelect = document.querySelector(".currency-select")
+const convertButton = document.querySelector(".convert-button");
+const currencySelect = document.querySelector(".currency-select");
+const apiKey = "8c19250981ca4f9058f02a93";
+let exchangeRates = {};
+
 
 function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
@@ -11,6 +14,8 @@ function convertValues() {
 
     const dolarToday = 5.2
     const euroToday = 6.2
+
+
 
 
 
@@ -54,7 +59,7 @@ function changeCurrency() {
         currencyImage.src = "./assets/Euro.jpg"
     }
     
-
+    convertValues()
 }
 
 
