@@ -1,10 +1,11 @@
 const convertButton = document.querySelector(".convert-button")
+const currencySelect = document.querySelector(".currency-select")
 
 function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert") //Valor em Real
     const currencyValueConverted = document.querySelector(".currency-value") // Outras moedas
-    const currencySelect = document.querySelector(".currency-select")
+
 
     console.log(currencySelect.value)
 
@@ -38,5 +39,13 @@ function convertValues() {
     console.log(convertedValue)
 }
 
-convertButton.addEventListener("click", convertValues)
 
+function changeCurrency() {
+    console.log("moeda trocada")
+
+}
+
+
+
+currencySelect.addEventListener("change", changeCurrency)
+convertButton.addEventListener("click", convertValues)
