@@ -41,7 +41,7 @@ function formatCurrency(value, currency) {
         case 'libra':
             return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(value);
         case 'bitcoin':
-            return new Intl.NumberFormat('en-US', { style: 'decimal', minimumFractionDigits: 8, maximumFractionDigits: 8 }).format(value) + ' BTC';
+            return new Intl.NumberFormat('en-US', { style: 'decimal', minimumFractionDigits: 8, maximumFractionDigits: 8 }).format (value) + "BTC"; 
     }
 }
 
@@ -67,6 +67,7 @@ function changedCurrency() {
 
     currencyNameFrom.innerHTML = currencyNames[fromCurrency];
     currencyImageFrom.src = currencyImages[fromCurrency];
+    convertValues()
 }
 
 currencySelected.addEventListener("change", changedCurrency);
