@@ -1,7 +1,6 @@
 //VÁRIAVEIS DEFINIDAS PARA SELECIONAR ELEMENTOS DA DOM A SEREM MANIPULADAS DO HTML PARA EXIBIR RESULTADOS E RECEBER INFORMAÇÕES DO USUARÁIO
 const convertButton = document.querySelector(".convert-button"); //Variável usada para adicionar um evento de clique,quando o botão for pressionado, a conversão é executada.
 const currencySelect = document.querySelector(".currency-select"); //Variável usada para obter o valor da moeda selecionada.
-
 const currencySelected = document.querySelector(".currency-selected");//Variável usada para obter o valor da moeda de origem selecionada que deseja converter.
 const currencyValueToConvert = document.querySelector(".currency-value-to-convert");//Variável usada para atualizar e exibir o valor da moeda que está convertendo.
 const currencyValueConverted = document.querySelector(".currency-value");//Variável usada para atualizar e exibir o valor da moeda após a conversão.
