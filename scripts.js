@@ -78,16 +78,17 @@ function convertValues() {   /*PARSEFLOAT Converte a string de value para um nú
 
 
 //FUNÇÃO QUE ATUALIZA O NOME E A IMAGEM DA MOEDA QUANDO É ALTERADA 
-function changedCurrency() {
-    const fromCurrency = currencySelected.value.replace('1', '');
-    const currencyNameFrom = document.getElementById("currency-named");
-    const currencyImageFrom = document.querySelector(".currency-image");
+function changedCurrency() { //A função changedCurrency é acionada quando se muda a seleção da moeda de origem.
+    const fromCurrency = currencySelected.value.replace('1', ''); //replace('1', ''): Remove o caractere '1' do valor selecionado, transformando "dolar1" em "dolar", "euro1" em "euro", e assim por diante. Isso simplifica o valor 
+    const currencyNameFrom = document.getElementById("currency-named");//Este elemento exibe o nome da moeda de origem
+    const currencyImageFrom = document.querySelector(".currency-image");// Este elemento exibe a imagem da moeda de origem.
 
-    currencyNameFrom.innerHTML = currencyNames[fromCurrency];
-    currencyImageFrom.src = currencyImages[fromCurrency];
-    convertValues()
+    currencyNameFrom.innerHTML = currencyNames[fromCurrency];//Mapeia as moedas para seus nomes completos.
+    currencyImageFrom.src = currencyImages[fromCurrency];//Mapeia as moedas para suas imagens.
+    convertValues() //Chama a função convertValues para recalcular e atualizar os valores convertidos com base na nova moeda de origem selecionada. Essa função lida com a lógica de conversão e atualização dos elementos.
 }
 //EVENT LISTENER CRIADOS  PARA ACOSSIAR AOS ELEMENTOS E CHAMAR AS FUNÇÕES QUANDO NECESSÁRIO 
-currencySelected.addEventListener("change", changedCurrency);
-currencySelect.addEventListener("change", convertValues);
-convertButton.addEventListener("click", convertValues);
+currencySelected.addEventListener("change", changedCurrency); // Atualiza o nome e a imagem da moeda de origem e recalcula os valores convertidos quando a moeda de origem é alterada.
+currencySelect.addEventListener("change", convertValues);// Recalcula os valores convertidos e atualiza a interface do quando a moeda de destino é alterada.
+convertButton.addEventListener("click", convertValues);//Recalcula os valores convertidos e atualiza a interface quando o botão de conversão é clicado.
+
